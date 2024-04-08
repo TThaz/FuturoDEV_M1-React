@@ -1,4 +1,5 @@
 import CardTrilha from "./components/CardTrilha"
+import "./App.css"
 
 function App() {
 
@@ -6,7 +7,7 @@ function App() {
       nomeTrilha: "Trilha da Costa da Lagoa",
       cidade: "Florianópolis",
       estado: "SC",
-      duração: 120,
+      duracao: 120,
       trajeto: 4,
       dificuldade: "Fácil",
       tipo: "Caminhada/Trekking",
@@ -16,13 +17,13 @@ function App() {
 
 
   return (
-    <>
-    {
-      listaTrilhas.map((trilha, index) => (
-        <CardTrilha dadosTrilha={trilha} key={index}/> 
-      ))
-    }
-    </>
+    <div className="container">
+      {
+        listaTrilhas.map((trilha, index) => (
+          <CardTrilha dadosTrilha={trilha} key={index}/> 
+        ))
+      }
+    </div>
   )
 }
 

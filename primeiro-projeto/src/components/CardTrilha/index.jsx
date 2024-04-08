@@ -4,9 +4,17 @@ import "./style.css"
 function CardTrilha({dadosTrilha}) {
     return (
         <div className="card_container">
-            <h1>{dadosTrilha.nomeTrilha}</h1>
-            <span>{dadosTrilha.cidade} / {dadosTrilha.estado}</span>
-            <img width={200} src={dadosTrilha.urlImage} alt="imagem trilha" />
+            <img className="card_imagem" width={200} src={dadosTrilha.urlImage} alt="imagem trilha" />
+            <div className="card_display">
+                <h1>{dadosTrilha.nomeTrilha}</h1>
+                <div className="card_dados">
+                    <span>{dadosTrilha.cidade} / {dadosTrilha.estado}</span>
+                    <span>{dadosTrilha.duracao} Minutos / {dadosTrilha.trajeto} Km</span>
+                    <span>{dadosTrilha.dificuldade}</span>
+                    <span>{dadosTrilha.tipo}</span>
+                    <span>{dadosTrilha.nomeUsuario}</span>
+                </div>
+            </div>
         </div>
     )
 }
