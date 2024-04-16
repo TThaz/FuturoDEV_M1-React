@@ -1,28 +1,26 @@
 import CardTrilha from "./components/CardTrilha"
+import listaTrilhas from "./pages/Lista"
+import useFetch from "./hooks/useFetch"
 import "./App.css"
+import { useState, useEffect } from "react";
 
 function App() {
+  
+    const dados = useFetch("/dados.json");
+    const [trilhas, setTrilhas] = useState([]);
 
-  let listaTrilhas = [{
-      nomeTrilha: "Trilha da Costa da Lagoa",
-      cidade: "Florianópolis",
-      estado: "SC",
-      duracao: 120,
-      trajeto: 4,
-      dificuldade: "Fácil",
-      tipo: "Caminhada/Trekking",
-      nomeUsuario: "Carlos Aburaba",
-      urlImage: "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    }]
-
+    useEffect(() => {         //Esse useEffect serve para renderizar após o chamado do Fetch, caso os dados sejam alterados, ele executa a função
+      if(!!dados) {
+        setTrilhas(dados.trilha)
+      }
+    }, [dados])
 
   return (
     <div className="container">
-      {
-        listaTrilhas.map((trilha, index) => (
-          <CardTrilha dadosTrilha={trilha} key={index}/> 
-        ))
-      }
+      {!!trilhas &&
+        trilhas.map((trilha, index) => (
+            <CardTrilha dadosTrilha={trilha} key={index}/>
+          ))}
     </div>
   )
 }

@@ -29,7 +29,7 @@ function CardTrilha({dadosTrilha}) {
         dificuldade: PropTypes.string.isRequired,
         tipo: PropTypes.string.isRequired,
         nomeUsuario: PropTypes.string.isRequired,
-        urlImagem: PropTypes.string.isRequired
+        urlImage: PropTypes.string.isRequired
     })
 } 
 
