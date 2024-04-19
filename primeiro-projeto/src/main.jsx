@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
+//Importa o Provider e as rotas dos arquivos configurados na pasta router
+import { RouterProvider  } from 'react-router-dom'
+import routes from "./router/routes.jsx"
+
 // SEMANA 12 ROUTER CONFIG
 
 // Passado de maneira desestruturada, pois é grande a biblioteca react router dom
@@ -29,10 +33,6 @@ import './index.css'
 // ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  //Provider pega a variável para utilizar, apangando o React.StrictMode antes
-  // <RouterProvider router={routers}>
-  // </RouterProvider>
+  // Provider pega a variável para utilizar, apangando o React.StrictMode antes
+  <RouterProvider router={routes} />
 )
