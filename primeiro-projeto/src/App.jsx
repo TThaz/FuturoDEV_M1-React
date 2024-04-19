@@ -1,5 +1,4 @@
 import CardTrilha from "./components/CardTrilha"
-import listaTrilhas from "./pages/Lista"
 import useFetch from "./hooks/useFetch"
 import "./App.css"
 import { useState, useEffect } from "react";

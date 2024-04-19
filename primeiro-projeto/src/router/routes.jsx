@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
-import Cadastro from "../pages/Cadastro";
-import Home from "../pages/Home";
-import Lista from "../pages/Lista";
+import PaginaCadastro from "../pages/PaginaCadastro";
+import PaginaHome from "../pages/PaginaHome";
+import PaginaLista from "../pages/PaginaLista";
 
 // CRIO UMA LISTA DE ROTAS PARA ACESSAR AS PÁGINAS
 const routes = createBrowserRouter([
@@ -15,15 +15,15 @@ const routes = createBrowserRouter([
             //path - determina o caminho em URL
                 path: "/",
             //element - Componente a ser acessado através do caminho
-                element: <Home />
+                element: <PaginaHome />
             },
             {
                 path: "/cadastro-trilhas",
-                element: <Cadastro />
+                element: <PaginaCadastro />
             },
             {
                 path: "/lista-trilhas",
-                element: <Lista />
+                element: <PaginaLista />
             }
         ]
     }

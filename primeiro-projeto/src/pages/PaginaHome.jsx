@@ -1,4 +1,4 @@
-function Home() {
+function PaginaHome() {
     return (
         <>
             <h1>Página Home</h1>
@@ -6,4 +6,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default PaginaHome;
