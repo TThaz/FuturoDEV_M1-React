@@ -1,9 +1,11 @@
-import useFetch from "../hooks/useFetch"
+// import useFetch from "../hooks/useFetch"
 
 
 function PaginaLista() {
     return (
-        useFetch("#")
+        <div className="container">
+            <h1>Página Lista</h1>
+        </div>
     )
 }
 

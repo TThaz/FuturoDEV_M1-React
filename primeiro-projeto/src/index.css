@@ -13,3 +13,7 @@
   --white: #ffffff;
   --black: #181818;
 }
+
+.container {
+  padding-top: 4em;
+}

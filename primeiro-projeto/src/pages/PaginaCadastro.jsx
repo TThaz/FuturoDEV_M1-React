@@ -1,6 +1,8 @@
 function PaginaCadastro() {
     return (
-        <h1>Página Cadastro</h1>
+        <div className="container">
+            <h1>Página Cadastro</h1>
+        </div>
     )
 }
 

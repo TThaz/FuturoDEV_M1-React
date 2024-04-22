@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
-import PaginaCadastro from "../pages/PaginaCadastro";
-import PaginaHome from "../pages/PaginaHome";
-import PaginaLista from "../pages/PaginaLista";
+import PaginaCadastro from "../pages/PaginaCadastro.jsx";
+import PaginaHome from "../pages/PaginaHome/PaginaHome.jsx";
+import PaginaLista from "../pages/PaginaLista.jsx";
 
 // CRIO UMA LISTA DE ROTAS PARA ACESSAR AS PÁGINAS
 const routes = createBrowserRouter([

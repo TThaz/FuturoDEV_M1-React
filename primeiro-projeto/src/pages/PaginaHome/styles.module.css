@@ -1,0 +1,147 @@
+.content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20em;
+
+    background-color:rgba(0, 0, 0, 0.75);
+}
+
+.bgImage {
+        /*Tratamento da Imagem como Fundo*/
+
+    background-image: url("../../assets/pexels-quang-nguyen-vinh-222549-2132087.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mainTitle {
+    width: 960px;
+    height: 90px;
+    top: 296px;
+    left: 240px;
+    gap: 0px;
+    opacity: 0px;
+
+    /* font-family: Inter; */
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 45px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.mainText {
+    width: 730px;
+    height: 96px;
+    top: 440px;
+    left: 355px;
+    gap: 16px;
+    opacity: 0px;
+
+    /* font-family: Inter; */
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    text-align: center;
+
+    margin-top: 28px;
+
+    color: rgb(255, 251, 251);
+}
+
+.content2 {
+    display: flex;
+    flex-direction: column;
+
+    padding: 5em;
+}
+
+.descriptionTitle {
+    width: 904px;
+    height: 71px;
+    top: 1149px;
+    left: 83px;
+    gap: 0px;
+    opacity: 0px;
+
+    /* font-family: Montserrat; */
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.descriptionText{
+    width: 1273px;
+    height: 144px;
+    top: 1271px;
+    left: 83px;
+    gap: 0px;
+    opacity: 0px;
+    
+    /* font-family: Montserrat; */
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    
+    margin-top: 28px;
+}
+
+.content3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5em;
+}
+
+.contentDescription3{
+    width: 600px;
+    height: 227px;
+    top: 1604px;
+    left: 83px;
+    gap: 0px;
+    opacity: 0px;
+    
+    /* font-family: Montserrat; */
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+
+.contentImage3 > img{
+    width: 50em;
+}
+
+
+.button {
+    width: 15em;
+    height: 40px;
+    top: 590px;
+    left: 644px;
+    padding: 8px 16px 8px 16px;
+    gap: 0px;
+    border-radius: 4px 0px 0px 0px;
+    opacity: 0px;
+
+    background: #504908;
+    border: 1px solid #000000;
+    color: white;
+
+    margin-top: 28px;
+}
+
+.centerButton {
+    display: flex;
+    justify-content: center;
+}

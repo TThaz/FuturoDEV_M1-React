@@ -1,8 +1,7 @@
-import CardTrilha from "./components/CardTrilha"
-import useFetch from "./hooks/useFetch"
 import "./App.css"
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
 
 function App() {
   
@@ -16,8 +15,9 @@ function App() {
     // }, [dados])
 
   return (
-    <div className="container">
+    <div>
       <Header />
+      <Outlet />
     </div>
   )
 }
