@@ -1,4 +1,5 @@
 import styles from "./styles.module.css"
+import { Link } from "react-router-dom"
 
 function PaginaHome() {
     return (
@@ -13,7 +14,9 @@ function PaginaHome() {
                     Junte-se à comunidade de entusiastas ao ar livre, compartilhe suas aventuras e inspire-se com as experiências de outros aventureiros. 
                     Prepare-se para explorar novos horizontes e se conectar com a natureza através do Adventure Trails!
                     </span>
-                    <button className={styles.button}>Explorar Trilhas</button>
+                    <Link to="/lista-trilhas">
+                        <button className={styles.button}>Explorar Trilhas</button>
+                    </Link>
                 </div>
 
             </div>
@@ -28,7 +31,9 @@ function PaginaHome() {
                     Encontre informações detalhadas sobre cada trilha, incluindo distância, dificuldade, pontos de interesse naturais e dicas úteis para uma experiência eco-friendly.
                 </span>
                 <div className={styles.centerButton}>
-                    <button className={styles.button}>Explorar Trilhas</button>
+                    <Link to="/lista-trilhas">
+                        <button className={styles.button}>Explorar Trilhas</button>
+                    </Link>
                 </div>
             </div>
 
@@ -38,7 +43,9 @@ function PaginaHome() {
                     <p className={styles.contentDescription3}>
                     Compartilhe fotos, dicas e localização das suas trilhas favoritas
                     </p>
-                    <button className={styles.button}>Cadastrar Nova Trilha</button>
+                    <Link to="/cadastro-trilhas">
+                        <button className={styles.button}>Cadastrar Nova Trilha</button>
+                    </Link>
                 </div>
 
                 <div className={styles.contentImage3}>

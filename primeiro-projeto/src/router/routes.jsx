@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import PaginaCadastro from "../pages/PaginaCadastro.jsx";
 import PaginaHome from "../pages/PaginaHome/PaginaHome.jsx";
-import PaginaLista from "../pages/PaginaLista.jsx";
+import PaginaLista from "../pages/PaginaLista/PaginaLista.jsx";
 
 // CRIO UMA LISTA DE ROTAS PARA ACESSAR AS PÁGINAS
 const routes = createBrowserRouter([

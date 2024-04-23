@@ -48,7 +48,7 @@
     letter-spacing: 0.01em;
     text-align: center;
 
-    margin-top: 28px;
+    margin: 28px;
 
     color: rgb(255, 251, 251);
 }
@@ -138,7 +138,7 @@
     border: 1px solid #000000;
     color: white;
 
-    margin-top: 28px;
+    cursor: pointer;
 }
 
 .centerButton {

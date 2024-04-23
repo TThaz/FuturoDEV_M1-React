@@ -3,16 +3,18 @@ import "./style.css"
 
 function CardTrilha({dadosTrilha}) {
     return (
-        <div className="card_container">
-            <img className="card_imagem" width={200} src={dadosTrilha.urlImage} alt="imagem trilha" />
-            <div className="card_display">
-                <h1>{dadosTrilha.nomeTrilha}</h1>
-                <div className="card_dados">
-                    <span>{dadosTrilha.cidade} / {dadosTrilha.estado}</span>
-                    <span>{dadosTrilha.duracao} Minutos / {dadosTrilha.trajeto} Km</span>
-                    <span>{dadosTrilha.dificuldade}</span>
-                    <span>{dadosTrilha.tipo}</span>
-                    <span>{dadosTrilha.nomeUsuario}</span>
+        <div className="lista_cards">
+            <div className="card_container">
+                <img className="card_imagem" width={200} src={dadosTrilha.urlImage} alt="imagemTrilha" />
+                <div className="card_display">
+                    <h1>{dadosTrilha.nomeTrilha}</h1>
+                    <div className="card_dados">
+                        <span>{dadosTrilha.cidade} / {dadosTrilha.estado}</span>
+                        <span>{dadosTrilha.duracao} Minutos / {dadosTrilha.trajeto} Km</span>
+                        <span>{dadosTrilha.dificuldade}</span>
+                        <span>{dadosTrilha.tipo}</span>
+                        <span>{dadosTrilha.nomeUsuario}</span>
+                    </div>
                 </div>
             </div>
         </div>

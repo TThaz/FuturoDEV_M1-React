@@ -1,0 +1,24 @@
+.rectangle {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/pexels-quang-nguyen-vinh-222549-2132087.jpg");
+    background-position: center;
+    width: 100vw;
+    height: 371px;
+}
+
+.mainTitle {
+    height: 45px;
+    top: 568px;
+    left: 240px;
+    gap: 0px;
+    opacity: 0px;
+
+    /* font-family: Inter; */
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 45px;
+    text-align: center;
+
+    color: var(--primary);
+
+    padding: 4em;
+}

@@ -1,7 +1,14 @@
+.lista_cards{
+    display: flex;
+    justify-content: center;
+}
+
 .card_container {
     display: flex;
     box-shadow: .2em .2em .8em black;
     height: 15em;
+    width: 65em;
+    margin-top: 28px;
 }
 
 .card_imagem {
