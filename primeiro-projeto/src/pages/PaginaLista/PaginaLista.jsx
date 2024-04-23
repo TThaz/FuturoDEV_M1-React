@@ -1,22 +1,11 @@
 import CardTrilha from "../../components/CardTrilha";
-import useFetch  from "../../hooks/useFetch"
 import styles from "./style.module.css";
-import { useState, useEffect } from "react"
+import { TrilhasContext } from "../../contexts/TrilhasContext";
+import { useContext } from "react";
 
 function PaginaLista() {
 
-    const dados = useFetch("/dados.json");
-    const [trilhas, setTrilhas] = useState([]);
-
-    useEffect(() => {         //Esse useEffect serve para renderizar após o chamado do Fetch, caso os dados sejam alterados, ele executa a função
-      if(!!dados) {
-        setTrilhas(dados.trilhas)
-      }
-    }, [dados])
-
-
-
-
+  const {trilhas} = useContext(TrilhasContext)
 
     return (
         <div>
