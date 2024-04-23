@@ -1,5 +1,5 @@
 import CardTrilha from "../../components/CardTrilha";
-import styles from "./style.module.css";
+import styles from "./styles.module.css";
 import { TrilhasContext } from "../../contexts/TrilhasContext";
 import { useContext } from "react";
 
