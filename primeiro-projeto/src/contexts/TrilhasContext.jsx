@@ -10,12 +10,16 @@ export const TrilhasContextProvider = ({children}) => {
 
     useEffect(() => {         //Esse useEffect serve para renderizar após o chamado do Fetch, caso os dados sejam alterados, ele executa a função
       if(!!dados) {
-        setTrilhas(dados.trilhas)
+        setTrilhas(dados.trilhas);
       }
     }, [dados])
 
+    function addTrail(trailData) {
+      setTrilhas(t => [...t, trailData])
+    }
+
     return (
-        <TrilhasContext.Provider value={{trilhas, setTrilhas}}>
+        <TrilhasContext.Provider value={{trilhas, setTrilhas, addTrail}}>
                 {children}
         </TrilhasContext.Provider>
     )

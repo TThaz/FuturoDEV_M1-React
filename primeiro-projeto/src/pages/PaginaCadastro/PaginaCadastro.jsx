@@ -1,20 +1,32 @@
 import styles from "./styles.module.css"
-import  { useForm } from "react-hook-form"
+import { useForm } from "react-hook-form"
+import { TrilhasContext }  from "../../contexts/TrilhasContext"
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom"
 
 function PaginaCadastro() {
 
-    const { register } = useForm();
+    const { register, handleSubmit } = useForm();
+    const { addTrail } = useContext(TrilhasContext)
+    const navigate = useNavigate();
+
+
+    function sendForm(formValue) {
+        addTrail(formValue);
+
+        navigate("/lista-trilhas");
+    }
 
     return (
         <div className="container">
             <h1>Cadastro de nova trilha</h1>
 
-            <form action="" className={styles.form}>
+            <form className={styles.form} onSubmit={handleSubmit(sendForm)}>
 
                 <div className={styles.formOptions}>
-                    <label htmlFor="name">Nome da Trilha</label>
+                    <label htmlFor="nomeTrilha">Nome da Trilha</label>
                     <input type="text" 
-                    {...register("name", {
+                    {...register("nomeTrilha", {
                         required: "Este campo é obrigatório",
                         maxLength: {value: 100, message: "Esse campo permite no máximo 100 caracteres"}
                     })
@@ -59,9 +71,9 @@ function PaginaCadastro() {
                 </div>
 
                 <div className={styles.formOptions}>
-                    <label htmlFor="username">Nome completo do usuário</label>
+                    <label htmlFor="nomeUsuario">Nome completo do usuário</label>
                     <input type="text"  
-                    {...register("username", {
+                    {...register("nomeUsuario", {
                         required: "Este campo é obrigatório",
                         maxLength: {value: 60, message: "Esse campo permite no máximo 60 caracteres"}
                     })
@@ -96,19 +108,20 @@ function PaginaCadastro() {
                 </div>
 
                 <div className={styles.formOptions}>
-                    <label htmlFor="imagem-trilha">Imagem da Trilha</label>
+                    <label htmlFor="urlImage">Imagem da Trilha</label>
                     <input type="text"  
-                    {...register("imagem-trilha", {
+                    {...register("urlImage", {
                         required: "Este campo é obrigatório",
                         maxLength: {value: 300, message: "Esse campo permite no máximo 300 caracteres"}
                     })
                     }/>
                 </div>
+
                 <div className={styles.formButtons}>
-                    <button>Cadastrar</button>
+                    <button type="submit">Cadastrar</button>
                     <button>Voltar</button>
                 </div>
-        </form>
+            </form>
         </div>
     )
 }
