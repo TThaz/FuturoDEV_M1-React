@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 function PaginaCadastro() {
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: {errors} } = useForm();
     const { addTrail } = useContext(TrilhasContext)
     const navigate = useNavigate();
 
@@ -27,11 +27,12 @@ function PaginaCadastro() {
                     <label htmlFor="nomeTrilha">Nome da Trilha</label>
                     <input type="text" 
                     {...register("nomeTrilha", {
-                        required: "Este campo é obrigatório",
+                        required: "Nome da trilha não preenchido",
                         maxLength: {value: 100, message: "Esse campo permite no máximo 100 caracteres"}
                     })
                     }/>
                 </div>
+                {errors?.nomeTrilha && <p>{errors.nomeTrilha?.message}</p>}
 
                 <div className={styles.formOptions}>
                     <label htmlFor="duracao">Duração estimada (Min)</label>
@@ -41,6 +42,7 @@ function PaginaCadastro() {
                     })
                     }/>
                 </div>
+                {errors?.duracao && <p>{errors.duracao?.message}</p>}
 
                 <div className={styles.formOptions}>
                     <label htmlFor="trajeto">Trajeto (Km)</label>
@@ -49,6 +51,7 @@ function PaginaCadastro() {
                         required: "Este campo é obrigatório"})
                     }/>
                 </div>
+                {errors?.trajeto && <p>{errors.trajeto?.message}</p>}
 
                 <div className={styles.formOptions}>
                     <label htmlFor="cidade">Cidade</label>
@@ -59,6 +62,7 @@ function PaginaCadastro() {
                     })
                     }/>
                 </div>
+                {errors?.cidade && <p>{errors.cidade?.message}</p>}
 
                 <div className={styles.formOptions}>
                     <label htmlFor="estado">Estado</label>
@@ -69,6 +73,7 @@ function PaginaCadastro() {
                     })
                     }/>
                 </div>
+                {errors?.estado && <p>{errors.estado?.message}</p>}
 
                 <div className={styles.formOptions}>
                     <label htmlFor="nomeUsuario">Nome completo do usuário</label>
@@ -79,6 +84,7 @@ function PaginaCadastro() {
                     })
                     }/>
                 </div>
+                {errors?.nomeUsuario && <p>{errors.nomeUsuario?.message}</p>}
 
                 <div className={styles.formOptions}>
                     <label htmlFor="dificuldade">Dificuldade</label>
@@ -93,6 +99,7 @@ function PaginaCadastro() {
                         <option value="dificil">Dificil</option>
                     </select>
                 </div>
+                {errors?.dificuldade && <p>{errors.dificuldade?.message}</p>}
 
                 <div className={styles.formOptions}>
                     <label htmlFor="tipo">Tipo de Trilha</label>
@@ -106,6 +113,7 @@ function PaginaCadastro() {
                         <option value="caminhada">Caminhada</option>
                     </select>
                 </div>
+                {errors?.tipo && <p>{errors.tipo?.message}</p>}
 
                 <div className={styles.formOptions}>
                     <label htmlFor="urlImage">Imagem da Trilha</label>
@@ -116,6 +124,7 @@ function PaginaCadastro() {
                     })
                     }/>
                 </div>
+                {errors?.urlImage && <p>{errors.urlImage?.message}</p>}
 
                 <div className={styles.formButtons}>
                     <button type="submit">Cadastrar</button>
